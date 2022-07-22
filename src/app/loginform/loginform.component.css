@@ -1,0 +1,21 @@
+.login{
+    background-color: pink;
+}
+.form{
+    height: 250px;
+    width: 600px;
+    text-align: center;
+    align-items: center;
+    background-color: aliceblue;
+    margin-left: 400px;
+    margin-top: 30px;
+}
+.field{
+    width: 90%;
+}
+.field2{
+    
+    margin-top: 20px;
+    margin-left: 480px;
+    
+}

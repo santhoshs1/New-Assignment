@@ -1,0 +1,76 @@
+
+
+<div class="form" >
+    <h2 class="login">Login</h2><br>
+    <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
+        
+        
+        <mat-form-field class="field">
+            <mat-label >Enter your username</mat-label>
+            <input matInput placeholder="username" formControlName="uname" required>
+            <!-- <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field><br>
+        <mat-form-field class="field">
+            <mat-label>Enter your password</mat-label>
+            <input placeholder="password" matInput [type]="hide ? 'password' : 'text'" formControlName="pwd" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <!-- <mat-label>Enter your password</mat-label>
+            <input matInput placeholder="password"  required> -->
+            <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field><br>
+        <button type="submit" routerLink="/bookpage" class="field2" mat-raised-button color="primary" return="onSubmit()" [disabled]="!reactiveForm.valid">Login</button>
+    </form>
+</div>
+
+
+
+
+<!-- <div class="lform">
+    <mat-card class="card">
+        <form>
+            <mat-form-field >
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="username" >
+            </mat-form-field>
+          
+            <mat-form-field >
+              <mat-label>password</mat-label>
+              <input matInput placeholder="password">
+            </mat-form-field>
+            <button mat-raised-button type="submit">Login </button>
+          </form>
+          
+    </mat-card>
+</div> -->
+
+<!-- <mat-card>
+    <mat-card-content>
+        <div class="header">
+            <h2>LOGIN</h2>
+        </div>
+        <form (ngSubmit)="onLogin()" name="loginForm" [FormGroup]="loginForm">
+            <div class="email-input">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput required />
+                    <mat-error *ngIf="loginForm.get('email').errors?.required">
+                        required email address
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <span class="aLink">forgot password</span>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>password</mat-label>
+                    <input formControlName="password" matInput [type]="hide?:'password':'text'" required />
+                    <button mat-icon-button matsuffix (click)="hide=!hide" [attr.aria-label]="'Hide password'" [atr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></button>
+                        <mat-error *ngIf="loginForm.get('password').errors?.required">required password</mat-error>
+                </mat-form-field>
+            </div>
+            <button mat-flat-button color="primary">Login</button>
+        </form>
+    </mat-card-content>
+</mat-card> -->

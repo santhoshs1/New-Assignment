@@ -1,0 +1,12 @@
+<mat-toolbar class="header">
+    <img class="cartimg1" src="../assets/img.svg" height="20px" width="20px">
+    <span class="spancolor" routerLink="/bookpage">Book Cart</span>
+    <input type="text" class="search" placeholder="Search books or authors" name="search">
+    
+    <mat-icon type="button"  class="cartimg2"  routerLink="/pagecart"   matBadge="{{cartItemCount}}" matBadgeColor="warn">shopping_cart</mat-icon>
+    <a type="button" routerLink="/loginform" class="button" >Login</a>
+</mat-toolbar>
+<!-- <div *ngFor="let cartitem of cartItems">
+    <div>{{cartitem.book}}</div>
+</div> -->
+<!-- <app-pagecart></app-pagecart> -->

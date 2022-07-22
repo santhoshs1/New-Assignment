@@ -1,0 +1,43 @@
+.example-container {
+    width: 145%;
+    height: 260px;
+    margin-top:  10px; 
+    
+    border: 1px solid #555;
+}
+
+.alcat{
+    background-color: orange;
+    
+}
+.example-container2{
+    width: 145%;
+    height: 100%;
+    margin-top:  5px; 
+    
+    border: 1px solid #555;
+
+}
+.pf{
+    background-color: palevioletred;
+    margin-top: 0;
+}
+.mat-slider {
+    width: 190px;
+
+}
+.line{
+    margin-left: 10px;
+}
+.example-container-new{
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    margin-left: 20px;
+    
+}
+
+
+
+

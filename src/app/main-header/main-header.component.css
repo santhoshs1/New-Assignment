@@ -1,0 +1,30 @@
+.header{
+    background-color: blue;
+    padding:15px;
+    margin: auto;
+}
+.spancolor{
+    color: white;
+    
+    margin-left: 10px ;
+    
+}
+.search {
+    margin-left: 300px;
+    padding-right:280px;
+    padding-top:5px ;
+    padding-bottom:5px ;
+}
+.cartimg1{
+    margin-left: 10px;
+}
+.cartimg2{
+    margin-left: 330px;
+}
+.badge{
+    margin-right: 15px;
+}
+.button{
+    color: white;
+    margin-left: 20px;
+}

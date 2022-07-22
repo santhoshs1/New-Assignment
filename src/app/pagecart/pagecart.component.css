@@ -1,0 +1,56 @@
+td{
+    width:18%;
+    /* margin-left: 20px; */
+    /* margin-right: 120px; */
+    text-align: center;
+    
+}
+th {
+  width: 5%;
+ 
+}
+
+.docs-example-viewer-title-spacer {
+  display: flex;
+  justify-content: space-between;
+  background-color: pink;
+  
+}
+.one{
+  width: 80%;
+  margin-left: 80px;
+}
+.docs-example-viewer-title{
+    width: 82%;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+img {
+  width: 40%;
+  overflow: hidden;
+  position: relative;
+}
+.mat-elevation-z4{
+    padding-top: 0px;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-top: 4px;
+    margin-right: 2px;
+}
+
+.btn-container {
+  display: flex;
+  text-align: center;
+  width: 1%;
+}
+.card{
+    width:80%;
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 10px;
+}
+.div-quantity {
+  margin: auto;
+  text-align: center;
+}

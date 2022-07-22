@@ -1,0 +1,90 @@
+<div class="docs-example-viewer-wrapper">
+    <div class="docs-example-viewer-title mat-elevation-z4">
+        <div class="docs-example-viewer-title-spacer">
+            <h2>Cart Items</h2>
+            <div *ngIf="users && users.length>0">
+                <button class="mat-elevation-z4" mat-raised-button  (click)="clearCart()">Clear cart</button>
+            </div>
+        </div>
+    </div>
+    <ng-template #emptycart>
+        <mat-card class="one">
+            <mat-card-title>
+                Shopping cart is empty
+            </mat-card-title>
+            <mat-card-content>
+                <button mat-raised-button color="primary" routerLink="/bookpage" >Continue shopping</button>
+            </mat-card-content>
+        </mat-card>
+    </ng-template>
+    <mat-card class="card" *ngIf="users && users.length>0; else emptycart">
+        <mat-card-content>
+            <table class="table">
+                <thead >
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>MRP</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            </table>
+        </mat-card-content>
+
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let user of users">
+                    
+                    <mat-card-content class="mat-elevation-z2" >
+                        <!-- <div>{{user.bookId}}</div> --> 
+                       
+                       
+                        <td > 
+                            <img matTooltip={{user.title}} matTooltipPosition="after"
+                                src="https://bookcart.azurewebsites.net/upload/{{user.coverFileName}}">
+                        </td>
+                        <td><a>{{user.title}}</a></td>
+                        <td>{{user.price | currency : 'INR' }}</td>
+                        <td>
+                            <div class="btn-container">
+                                <div class="btn-minus"><button 
+                                        mat-icon-button color="warn"  >
+                                        <mat-icon>remove_circle</mat-icon>
+                                    </button>
+                                </div>
+                                <div class="div-quantity">{{user.quantity}}</div>
+                                <div class="btn-plus"><button mat-icon-button color="warn"
+                                        >
+                                        <mat-icon>add_circle</mat-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td>{{ user.price * user.quantity | currency : 'INR'}}</td>
+                        <td>
+                            <button mat-icon-button color="accent" matTooltip="Delete item" (click)="deleteCartItem(user.bookId)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </mat-card-content>
+                </tr>
+            </tbody>
+            <tfoot class="table">
+                <tr>
+                    <mat-card-content>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <td>Cart Total:</td>
+                        <th>{{totalPrice| currency : 'INR' }}</th>
+                        <th>
+                            <button class="mat-elevation-z4" mat-raised-button color="warn" routerLink="/loginform">CheckOut</button>
+                        </th>
+                    </mat-card-content>
+                </tr>
+            </tfoot>
+        </table>
+    </mat-card>
+</div>
